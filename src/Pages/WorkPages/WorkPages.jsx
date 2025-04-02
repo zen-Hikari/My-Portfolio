@@ -57,7 +57,7 @@ function WorkPages() {
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href="https://nvl-cerpenverse.vercel.app/"
+                        href="https://nv-l-cerpen-verse.vercel.app/"
                         target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >

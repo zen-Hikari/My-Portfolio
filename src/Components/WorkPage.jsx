@@ -62,7 +62,7 @@ function WorkPage() {
                   </div>
                   <div className="btn-overlay absolute inset-0 flex justify-center items-center">
                     <a
-                      href="https://nvl-cerpenverse.vercel.app/"
+                      href="https://nv-l-cerpen-verse.vercel.app/"
                       target="_blank"
                       className="work-btn py-3 px-5  rounded-lg text-md font-semibold"
                     >
