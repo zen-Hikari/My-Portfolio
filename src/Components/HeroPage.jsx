@@ -28,7 +28,7 @@ function HeroPage() {
             <a href="/Work-Page" className="btn-hero py-2 px-4">
               View Work
             </a>
-            <a href="" className="btn-hero2 py-2 px-4">
+            <a href="mailto:danorel048@gmail.com?subject=Hello&body=I%20want%20to%20connect%20with%20you!" className="btn-hero2 py-2 px-4">
               Contact Me
             </a>
           </div>
