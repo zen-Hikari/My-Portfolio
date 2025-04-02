@@ -41,7 +41,8 @@ function WorkPage() {
                   </div>
                   <div className="btn-overlay absolute inset-0 flex justify-center items-center">
                     <a
-                      href="/Work-Page/Top-Up-Landing-Page"
+                      href="https://zen-hikari.github.io/NVL_Top-Up/"
+                      target="_blank"
                       className="work-btn py-3 px-5  rounded-lg text-md font-semibold"
                     >
                       View Details
@@ -61,7 +62,8 @@ function WorkPage() {
                   </div>
                   <div className="btn-overlay absolute inset-0 flex justify-center items-center">
                     <a
-                      href=""
+                      href="https://nvl-cerpenverse.vercel.app/"
+                      target="_blank"
                       className="work-btn py-3 px-5  rounded-lg text-md font-semibold"
                     >
                       View Details
@@ -82,7 +84,8 @@ function WorkPage() {
                   </div>
                   <div className="btn-overlay absolute inset-0 flex justify-center items-center">
                     <a
-                      href=""
+                      href="https://zen-hikari.github.io/Tetris/"
+                      target="_blank"
                       className="work-btn py-3 px-5  rounded-lg text-md font-semibold"
                     >
                       View Details
@@ -104,7 +107,8 @@ function WorkPage() {
                   </div>
                   <div className="btn-overlay absolute inset-0 flex justify-center items-center">
                     <a
-                      href=""
+                      href="https://landing-page-tamplate.vercel.app/"
+                      target="_blank"
                       className="work-btn py-3 px-5  rounded-lg text-md font-semibold"
                     >
                       View Details

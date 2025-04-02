@@ -7,6 +7,7 @@ import Work5 from "../../Components/assets/work5.png";
 import Work6 from "../../Components/assets/work6.png";
 import Work7 from "../../Components/assets/work7.png";
 import Work8 from "../../Components/assets/work8.png";
+import Work9 from "../../Components/assets/work9.png";
 
 function WorkPages() {
   return (
@@ -37,7 +38,8 @@ function WorkPages() {
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://zen-hikari.github.io/NVL_Top-Up/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -55,7 +57,8 @@ function WorkPages() {
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://nvl-cerpenverse.vercel.app/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -71,7 +74,8 @@ function WorkPages() {
                     <h1 className="text-2xl font-semibold mb-7">Tetris Game</h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://zen-hikari.github.io/Tetris/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -91,7 +95,8 @@ function WorkPages() {
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://landing-page-tamplate.vercel.app/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -109,7 +114,8 @@ function WorkPages() {
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://creative-agency-landing-page-three.vercel.app/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -127,7 +133,8 @@ function WorkPages() {
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://watch-landing-page-lemon.vercel.app/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -147,7 +154,8 @@ function WorkPages() {
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://nh-my-anime-list.vercel.app/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -163,7 +171,8 @@ function WorkPages() {
                     <h1 className="text-2xl font-semibold mb-7">NH Travel</h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://nh-travel.vercel.app/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -174,14 +183,15 @@ function WorkPages() {
                 </div>
 
                 <div className="work py-5 px-5 rounded-2xl">
-                  <img src={Work1} alt="" className="rounded-2xl mb-7" />
+                  <img src={Work9} alt="" className="rounded-2xl mb-7" />
                   <div className="work-detail py-2">
                     <h1 className="text-2xl font-semibold mb-7">
                       Vegetables Shop
                     </h1>
                     <div className="btn-work-detail">
                       <a
-                        href=""
+                        href="https://zen-hikari.github.io/vegetablesShop/"
+                        target="_blank"
                         className="flex gap-2 items-center text-sm font-semibold"
                       >
                         View Live
@@ -191,7 +201,6 @@ function WorkPages() {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
