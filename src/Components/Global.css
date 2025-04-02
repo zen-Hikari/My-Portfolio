@@ -1,0 +1,432 @@
+:root {
+    --gray-text: rgba(162, 162, 162, 0.895);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.link-menu {
+    background: linear-gradient(180deg, #2d2e3f50 20%, rgba(0, 0, 0, 0.24) 100%, rgba(0, 0, 0, 0.517) 20%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.136);
+}
+
+.overlay {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: -100px;
+    left: auto;
+    transform: translateX(-50%);
+    top: -300px;
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    filter: blur(240px);
+    pointer-events: none;
+}
+
+.contact {
+    background: linear-gradient(180deg, #2d2e3f 0%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.034);
+}
+
+.hamburger {
+    background: linear-gradient(180deg, #2d2e3f 0%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.034);
+    /* padding: 10px; */
+    border-radius: 20px;
+}
+
+/* navbar end */
+
+/* heropage start */
+.title-hero h1 {
+    line-height: 1.4em;
+    /* font-size: 58px; */
+}
+
+.desc-hero h5 {
+    color: var(--gray-text);
+}
+
+.btn-hero {
+    background-color: rgb(84, 130, 255);
+    border-radius: 8px;
+}
+
+.btn-hero2 {
+    background: linear-gradient(180deg, #2d2e3f 20%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 20%);
+    border: 1px solid rgba(255, 255, 255, 0.034);
+    border-radius: 8px;
+}
+
+.project-carousel-infinity {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 50s linear infinite;
+    width: max-content;
+    /* Pastikan track bisa lebih panjang dari container */
+}
+
+/* Ukuran gambar */
+.carousel-track img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Animasi seamless scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Efek gradasi di kiri & kanan */
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    /* Atur lebar efek fade */
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    /* Agar tidak mengganggu interaksi */
+}
+
+/* Gradasi kiri */
+.fade-overlay.left {
+    left: 0;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+/* Gradasi kanan */
+.fade-overlay.right {
+    right: 0;
+    background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+/* heropage end */
+
+/* service start */
+.web-developer,
+.game-developer,
+.project,
+.about-profile,
+.blog,
+.work {
+    border: 1px solid rgba(192, 192, 192, 0.337);
+}
+
+.service-title h5,
+.work-title h5 {
+    color: rgba(192, 192, 192, 0.895);
+}
+
+.btn-service,
+.work-btn,
+.about-btn,
+.btn-title-about,
+.blog-btn,
+.blog-page,
+.btn-pages,
+.btn-work-pages a,
+.btn-work-index a {
+    background: linear-gradient(180deg, #2d2e3f 0%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.173);
+    font-weight: 500;
+}
+
+.web-desc h1 {
+    font-size: 22px;
+}
+
+.web-desc h5 {
+    font-size: 17px;
+    color: var(--gray-text);
+}
+
+.game-desc h1 {
+    font-size: 22px;
+}
+
+.game-desc h5 {
+    font-size: 17px;
+    color: var(--gray-text);
+}
+
+.icon-web i {
+    border: 1px solid rgba(72, 97, 255, 0.9);
+    /* Biru muda */
+    box-shadow: 0 0 15px rgb(72, 96, 255);
+    /* Efek cahaya biru muda */
+    transition: 0.3s ease-in-out;
+}
+
+.game-i {
+    color: rgba(72, 97, 255, 0.9);
+}
+
+.web-i {
+    color: rgba(72, 97, 255, 0.9);
+}
+
+.web-img {
+    width: 900px;
+    height: auto;
+}
+
+.game-img {
+    width: 900px;
+    height: auto;
+}
+
+/* service end */
+/* work page */
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-desc {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 20px;
+    color: white;
+    opacity: 1;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.img-desc h5 {
+    color: var(--gray-text);
+}
+
+.img-desc h1 {
+    font-size: 20px;
+}
+
+/* Trik box-shadow sebagai gradasi */
+.img-desc::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px -180px 200px -60px rgba(0, 0, 0, 0.9) inset;
+    z-index: -2;
+}
+
+.project {
+    border-radius: 16px;
+}
+
+.project img {
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.project:hover img {
+    border-radius: 16px;
+    transform: scale(1.1);
+    transition: 0.4s ease-in-out;
+}
+
+.project:hover .img-desc {
+    box-shadow: 0px -300px 200px -100px rgba(0, 0, 0, 0.9) inset;
+    transition: 0.2s ease-in-out;
+}
+
+.project:hover .img-cont {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.btn-overlay {
+    opacity: 0;
+    justify-content: center;
+    /* Posisi horizontal tengah */
+    align-items: center;
+    transform: scale(0);
+    /* Nilai awal normal */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.project:hover .btn-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* work page */
+/* abou page */
+.about-title h5 {
+    color: var(--gray-text);
+}
+
+/* abou page */
+
+/* Blog page */
+.blog-title h5 {
+    color: var(--gray-text);
+}
+
+.created {
+    color: var(--gray-text);
+}
+
+.full-blog:hover {
+    color: var(--gray-text);
+    transition: 0.2s ease-in-out;
+}
+
+.blog-unreal {
+    border: 1px solid rgba(255, 255, 255, 0.221);
+}
+
+/* Blog page */
+.work-pages-title h5 {
+    color: var(--gray-text);
+}
+
+.btn-work-detail {
+    color: var(--gray-text);
+}
+.btn-work-detail a i{
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-work-detail:hover  a i{
+    transform: translateX(8px);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1468px) {
+    nav {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .container {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    .about-flex {
+        flex-direction: column;
+    }
+
+    .about-profile {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 849px) {
+    .web-desc h5 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .link-menu {
+        background: linear-gradient(180deg, #2d2e3f50 20%, rgba(0, 0, 0, 0.24) 100%, rgba(0, 0, 0, 0.517) 20%);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.136);
+    }
+
+    .contact {
+        background: none;
+        backdrop-filter: blur(0px);
+        border: none;
+    }
+
+    .flex-1,
+    .flex-2,
+    .service-img-compt,
+    .blog-direction,
+    .work-flex {
+        flex-direction: column;
+    }
+    .work-flex3 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 502px) {
+
+    .service-title h5 br,
+    .service-title h1 br,
+    .work-title h1 br,
+    .work-title h5 br,
+    .title-hero h1 br,
+    .desc-hero h5 br,
+    .blog-title h5 br,
+    .blog h1 br {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        width: 400px;
+        height: 400px;
+        top: -200px;
+        filter: blur(180px);
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        filter: blur(120px);
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .title-hero h1 br {
+        display: none;
+    }
+
+    .desc-hero h5 br {
+        display: none;
+    }
+}
