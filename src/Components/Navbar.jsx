@@ -5,25 +5,11 @@ import "./Global.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // Menambahkan state untuk modal
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleOverlayClick = (e) => {
-    if (e.target.classList.contains("modal-overlay")) {
-      closeModal();
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,13 +43,13 @@ function Navbar() {
           <div
             className={`link-menu flex gap-8 text-lg font-semibold py-3 px-6 xl:rounded-full lg:rounded-full md:rounded-full rounded-3xl xl:mt-0 lg:mt-0 md:mt-0 mt-9 ${
               menuOpen
-                ? "fixed top-20 left-0 right-0 flex flex-col mx-5 text-xl items-center bg-white/10 backdrop-blur-lg border border-white/20 py-15 pb-29"
+                ? "fixed top-20 left-0 right-0 flex flex-col mx-5 text-xl items-center bg-black backdrop-blur-md border border-white/20 py-15 pb-29"
                 : "hidden md:flex"
             }`}
           >
+            <a href="#about">About</a>
             <a href="#service">Service</a>
             <a href="#work">Works</a>
-            <a href="#about">About</a>
             <a href="#blog">Blog</a>
           </div>
           <div
@@ -73,9 +59,9 @@ function Navbar() {
                 : "hidden md:flex"
             }`}
           >
-            <button onClick={openModal} className="cursor-pointer">
+            <a href="https://www.linkedin.com/in/zen-hikari-703125316/" target="_blank" className="cursor-pointer">
               Connect Me
-            </button>
+            </a>
           </div>
           <button
             className="hamburger space-y-2 px-4 py-2"
@@ -99,33 +85,6 @@ function Navbar() {
           </button>
         </nav>
       </div>
-
-      {/* Modal Pop-up */}
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={handleOverlayClick}>
-          <div className="modal-content text-white py-20 px-10 rounded-lg">
-            <h1 className="text-2xl font-bold">Connect Me</h1>
-            <div className="icons-container">
-              {/* GitHub */}
-              <a
-                href="https://github.com/zen-Hikari"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="ai-github-fill fa-3x text-4xl text-white"></i>
-              </a>
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/zen-hikari-703125316/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="ai-linkedin-box-fill fa-3x text-4xl text-white"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   );
 }

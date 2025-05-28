@@ -44,8 +44,7 @@ const GalaxyStars = () => {
     }
 
     function drawBackground() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
     function drawStars() {
@@ -60,7 +59,7 @@ const GalaxyStars = () => {
       // Bintang jatuh
       stars.forEach((star) => {
         star.trail.push({ x: star.x, y: star.y, opacity: star.opacity });
-        if (star.trail.length > 7) star.trail.shift();
+        if (star.trail.length > 5) star.trail.shift();
 
         for (let i = 0; i < star.trail.length - 1; i++) {
           const opacity = star.trail[i].opacity * ((i + 1) / star.trail.length);

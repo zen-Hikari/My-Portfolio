@@ -1,27 +1,108 @@
 :root {
-    --gray-text: rgba(162, 162, 162, 0.895);
+    --gray-text: #EEEEEE;
 }
+
+
+/* app */
+.overlay-app{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -300px;
+    top: 1200px;
+    background: rgba(72, 97, 255, 0.9);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: -999;
+}
+.overlay-app-2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -400px;
+    top: 2200px;
+    background: rgba(72, 97, 255, 0.9);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: -999;
+}
+.overlay-app-3 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -400px;
+    top: 3700px;
+    background: rgba(72, 97, 255, 0.9);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: -999;
+}
+.overlay-app-4 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -300px;
+    top: 5200px;
+    background: rgba(72, 97, 255, 0.9);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: -999;
+}
+
+.overlay {
+    position: absolute;
+    width: 70px;
+    height: 900px;
+    right: 400px;
+    left: auto;
+    transform: translateX(-50%);
+    top: -180px;
+    background: rgba(72, 96, 255, 0.768);
+    border-radius: 100px;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: -999;
+}
+
+.web-developer,
+.game-developer {
+    background: rgba(0, 0, 0, 0.637);
+    box-shadow: rgba(72, 97, 255, 0.9);
+}
+.light-overlay {
+    top: 140px;
+    width: 200px;
+    z-index: -999;
+    height: 100px;
+    right: 90px;
+    filter: blur(70px);
+    position: absolute;
+    border-radius: 100%;
+    background: rgba(72, 96, 255, 0.884);
+    animation: kelapKelip 1.5s infinite ease-in-out;
+}
+@keyframes kelapKelip {
+    0% {
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.7;
+      }
+  }
+
+@media (max-width: 768px) {
+    .overlay {
+        right: 100px;
+    }
+    
+}
+
+/* app */
 
 /* navabr */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.331);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: linear-gradient(180deg, #2d2e3f50 20%, rgba(0, 0, 0, 0.24) 100%, rgba(0, 0, 0, 0.517) 20%);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    border: 1px solid rgba(255, 255, 255, 0.136);
-    text-align: center;
-}
 
 .close-btn {
     background: none;
@@ -55,19 +136,6 @@
     border: 1px solid rgba(255, 255, 255, 0.136);
 }
 
-.overlay {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    right: -100px;
-    left: auto;
-    transform: translateX(-50%);
-    top: -300px;
-    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
-    filter: blur(240px);
-    pointer-events: none;
-}
-
 .contact {
     background: linear-gradient(180deg, #2d2e3f 0%, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
     border: 1px solid rgba(255, 255, 255, 0.034);
@@ -79,6 +147,8 @@
     /* padding: 10px; */
     border-radius: 20px;
 }
+
+
 
 /* navbar end */
 
@@ -113,8 +183,8 @@
 
 .carousel-track {
     display: flex;
-    gap: 20px;
-    animation: scroll 50s linear infinite;
+    gap: 15px;
+    animation: scroll 45s linear infinite;
     width: max-content;
     /* Pastikan track bisa lebih panjang dari container */
 }
@@ -161,16 +231,32 @@
     background: linear-gradient(to left, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
+.service-content h1,
+.work-cont h1 {
+    line-height: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+    .service-content h1,
+    .work-cont h1 {
+        line-height: normal;
+    }
+}
 /* heropage end */
 
 /* service start */
+.web-desc h1,
+.game-desc h1 {
+    line-height: normal;
+}
 .web-developer,
 .game-developer,
 .project,
 .about-profile,
 .blog,
-.work {
-    border: 1px solid rgba(192, 192, 192, 0.337);
+.work,
+.blog-unreal {
+    border: 1px solid rgba(255, 255, 255, 0.185);
 }
 
 .service-title h5,
@@ -197,7 +283,7 @@
 }
 
 .web-desc h5 {
-    font-size: 17px;
+    font-size: 16px;
     color: var(--gray-text);
 }
 
@@ -206,7 +292,7 @@
 }
 
 .game-desc h5 {
-    font-size: 17px;
+    font-size: 16px;
     color: var(--gray-text);
 }
 
@@ -225,17 +311,6 @@
 .web-i {
     color: rgba(72, 97, 255, 0.9);
 }
-
-.web-img {
-    width: 900px;
-    height: auto;
-}
-
-.game-img {
-    width: 900px;
-    height: auto;
-}
-
 /* service end */
 /* work page */
 .project {
@@ -243,71 +318,13 @@
     overflow: hidden;
 }
 
-.img-desc {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 20px;
-    color: white;
-    opacity: 1;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.img-desc h5 {
-    color: var(--gray-text);
-}
-
-.img-desc h1 {
-    font-size: 20px;
-}
-
-/* Trik box-shadow sebagai gradasi */
-.img-desc::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px -180px 200px -60px rgba(0, 0, 0, 0.9) inset;
-    z-index: -2;
-}
-
-.project {
-    border-radius: 16px;
-}
-
-.project img {
-    object-fit: cover;
-    border-radius: 16px;
-    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-}
-
-.project:hover img {
-    border-radius: 16px;
-    transform: scale(1.1);
-    transition: 0.4s ease-in-out;
-}
-
-.project:hover .img-desc {
-    box-shadow: 0px -300px 200px -100px rgba(0, 0, 0, 0.9) inset;
-    transition: 0.2s ease-in-out;
-}
-
-.project:hover .img-cont {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
 
 .btn-overlay {
     opacity: 0;
     justify-content: center;
     /* Posisi horizontal tengah */
     align-items: center;
-    transform: scale(0);
+    transform: scale(0.9);
     /* Nilai awal normal */
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
@@ -321,6 +338,10 @@
 /* abou page */
 .about-title h5 {
     color: var(--gray-text);
+}
+
+.modal-overlay {
+  z-index: 999; /* pastikan lebih tinggi dari elemen lain */
 }
 
 /* abou page */
@@ -337,10 +358,6 @@
 .full-blog:hover {
     color: var(--gray-text);
     transition: 0.2s ease-in-out;
-}
-
-.blog-unreal {
-    border: 1px solid rgba(255, 255, 255, 0.221);
 }
 
 /* Blog page */
@@ -378,13 +395,18 @@
         margin-left: 16px;
     }
 
+    .content-hero {
+        margin-right: 28px;
+        margin-left: 28px;
+    }
+
     .container {
         margin-right: 16px;
         margin-left: 16px;
     }
 }
 
-@media screen and (max-width: 1004px) {
+@media screen and (max-width: 1064px) {
     .about-flex {
         flex-direction: column;
     }
@@ -447,23 +469,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .overlay {
-        width: 400px;
-        height: 400px;
-        top: -200px;
-        filter: blur(180px);
-    }
-}
-
-@media (max-width: 480px) {
-    .overlay {
-        width: 300px;
-        height: 300px;
-        top: -150px;
-        filter: blur(120px);
-    }
-}
 
 @media screen and (max-width: 551px) {
     .title-hero h1 br {

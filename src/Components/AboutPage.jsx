@@ -1,81 +1,50 @@
 import "./Global.css";
 import Profile from "./assets/profile3.png";
-import { useState } from "react";
+
 function AboutPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleOverlayClick = (e) => {
-    if (e.target.classList.contains("modal-overlay")) {
-      closeModal();
-    }
-  };
 
   return (
-    <section className="" id="about">
+    <section
+      className="pt-60"
+      id="about"
+      data-aos="fade-zoom-in"
+      data-aos-easing="linear"
+      data-aos-delay="400"
+    >
       <div className="flex justify-center">
         <div className="container">
-          <div className="about-flex flex gap-5 justify-center items-center">
-            <div className="about-title text-white flex-1">
+          <div className="about-flex flex gap-5 justify-center items-center flex-wrap">
+            <div className="about-title text-white flex-1 min-w-[300px]">
               <a href="" className="about-btn text-sm py-1 px-3 rounded-lg">
-                LET ME INTRODUCE MY SELF
+                ABOUT
               </a>
-              <h1 className="py-5 text-4xl font-bold">Noval Hasmi Wijaya</h1>
-              <h5 className="font-semibold text-lg">
-                My name is Noval Hasmi Wijaya, and I am a passionate Front-End
-                Developer & Game Developer. I specialize in creating seamless
-                and visually appealing user interfaces, combining design and
-                development to enhance both web and gaming experiences.
+              <h1 className="py-5 xl:text-5xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl font-semibold">Noval Hasmi Wijaya</h1>
+              <h5 className="font-semibold xl:text-lg lg:text-lg md:text-lg sm:text-md text-md">
+              I'm Noval Hasmi Wijaya, a passionate Front-End & Game Developer. I focus on building smooth, visually appealing user interfaces that blend design and development for great web and gaming experiences.
               </h5>
-              <h5 className="text-lg font-semibold py-8">
+              <h5 className="xl:text-lg lg:text-lg md:text-lg sm:text-md text-md font-semibold py-8">
                 I love turning ideas into interactive and functional web
                 applications, as well as developing immersive games.
               </h5>
-              <button
-                onClick={openModal}
+              <a href="https://www.linkedin.com/in/zen-hikari-703125316/"
+              target="_blank"
                 className="btn-title-about py-3 px-5 rounded-lg cursor-pointer"
               >
                 Connect Me
-              </button>
+              </a>
             </div>
-            <div className="about-profile w-full flex-[0.7]  py-5 px-5 rounded-2xl">
-              <img src={Profile} alt="" className="rounded-2xl w-full" />
+
+            {/* Gambar profil yang diperbesar */}
+            <div className="about-profile w-full xl:max-w-xl lg:max-w-none md:max-w-none max-w-none py-3 px-3 rounded-xl ">
+              <img
+                src={Profile}
+                alt="Profile"
+                className="rounded-xl w-full object-cover"
+              />
             </div>
           </div>
         </div>
       </div>
-
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={handleOverlayClick}>
-          <div className="modal-content text-white py-20 px-10 rounded-lg">
-            <h1 className="text-2xl font-bold">Connect Me</h1>
-            <div className="icons-container">
-              {/* GitHub */}
-              <a
-                href="https://github.com/zen-Hikari"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="ai-github-fill fa-3x text-4xl text-white"></i>
-              </a>
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/zen-hikari-703125316/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="ai-linkedin-box-fill fa-3x text-4xl text-white"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

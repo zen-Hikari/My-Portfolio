@@ -6,15 +6,20 @@ import Blog4 from "./assets/blog/api.png";
 
 function BlogPage() {
   return (
-    <section className="pt-50 pb-10" id="blog">
+    <section className="pt-60 pb-10" id="blog">
       <div className="flex justify-center">
         <div className="container">
           <div className="blog-flex text-white">
-            <div className="blog-title">
+            <div
+              className="blog-title"
+              data-aos="fade-zoom-in"
+              data-aos-easing="linear"
+              data-aos-delay="400"
+            >
               <a href="" className="blog-btn py-1 px-3 rounded-lg">
                 BLOG
               </a>
-              <h1 className="text-4xl font-bold mt-5">My Blog</h1>
+              <h1 className="text-4xl font-semibold mt-5">My Blog</h1>
               <h5 className="mt-5 xl:text-lg lg:text-lg md:text-lg sm:text-md text-md font-semibold">
                 On this page you can see blogs that provide knowledge or
                 anything that is useful <br /> through my personal blog. Let's
@@ -29,7 +34,12 @@ function BlogPage() {
                 </a>
               </div>
             </div>
-            <div className="blog-compt mt-10">
+            <div
+              className="blog-compt mt-10"
+              data-aos="fade-zoom-in"
+              data-aos-easing="linear"
+              data-aos-delay="400"
+            >
               <div className="blog-direction flex justify-center gap-5 mb-5">
                 <div className="blog py-6 px-5 rounded-2xl">
                   <img src={Blog1} alt="" className="rounded-2xl" />

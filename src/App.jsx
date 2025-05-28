@@ -1,4 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './Components/Global.css'
+import luxy from "luxy.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import GalaxyStars from "./Canvas/SnowBg";
@@ -18,21 +23,55 @@ import Blog6 from "./Pages/BlogPageCompt/Blog6.jsx";
 import Blog7 from "./Pages/BlogPageCompt/Blog7.jsx";
 
 function App() {
+  useEffect(() => {
+    const luxyWrapper = document.querySelector("#luxy");
+  
+    if (luxyWrapper) {
+      luxy.init({
+        wrapper: "#luxy",
+        wrapperSpeed: 0.04,
+      });
+  
+      AOS.init({
+        duration: 700,
+        offset: 100,
+      });
+  
+      const handleScroll = () => {
+        AOS.refresh();
+      };
+  
+      luxyWrapper.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        luxyWrapper.removeEventListener("scroll", handleScroll);
+      };
+    } else {
+      console.warn("Elemen dengan ID #luxy tidak ditemukan.");
+    }
+  }, []);
+  
+
   return (
     <Router>
+      <div className="bg-gradient-to-t from-black/30 to-transparent fixed bottom-0 inset-x-0 h-18 z-50 pointer-events-none"></div>
       <GalaxyStars />
       <Routes>
         <Route
           path="/"
           element={
-            <>
+            <main id="luxy">
               <Navbar />
               <HeroPage />
-              <ServicePage />
-              <WorkPage />
               <AboutPage />
+              <div className="overlay-app rounded-full"></div>
+              <ServicePage />
+              <div className="overlay-app-2 rounded-full"></div>
+              <WorkPage />
+              <div className="overlay-app-3 rounded-full"></div>
               <BlogPage />
-            </>
+              <div className="overlay-app-4 rounded-full"></div>
+            </main>
           }
         />
 

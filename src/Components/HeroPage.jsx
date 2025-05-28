@@ -7,28 +7,36 @@ import Project5 from "./assets/project-5.png";
 
 function HeroPage() {
   return (
-    <section className="relative text-white">
-      <div className="overlay absolute z-[-1] rounded-full"></div>
-      <div className="flex justify-center pt-53">
+    <section
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      data-aos-offset="0"
+      className="relative text-white"
+    >
+      <div className="overlay absolute rotate-45"></div>
+      <div className="flex justify-center pt-49">
         <div className="container content-hero">
           <div className="title-hero">
             <h1 className=" font-bold text-center xl:text-6xl lg:text-6xl md:text-5xl sm:text-4xl text-3xl">
-              Hey, I'm Noval Hasmi. I'm a <br /> Front-End Developer & Game
-              <br /> Developer
+              Hi, I'm Noval Hasmi - Front-End <br /> Developer & Bug Hunter
             </h1>
           </div>
           <div className="desc-hero mt-5">
-            <h5 className="text-lg font-bold text-center">
+            <h5 className="text-lg font-semibold text-center">
               I am a developer and designer who has a passion for building
               <br />
               responsive, cool looking, and easy to visit website applications.
-            </h5>
+            </h5> 
           </div>
           <div className="btn-hero-cont mt-10 text-md font-semibold justify-center items-center flex gap-5 mb-10">
             <a href="/Work-Page" className="btn-hero py-2 px-4">
               View Work
             </a>
-            <a href="mailto:danorel048@gmail.com?subject=Hello&body=I%20want%20to%20connect%20with%20you!" className="btn-hero2 py-2 px-4">
+            <a
+              href="mailto:danorel048@gmail.com?subject=Hello&body=I%20want%20to%20connect%20with%20you!"
+              className="btn-hero2 py-2 px-4"
+            >
               Contact Me
             </a>
           </div>
