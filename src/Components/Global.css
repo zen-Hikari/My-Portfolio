@@ -335,7 +335,7 @@
 }
 
 /* work page */
-/* abou page */
+/* about page */
 .about-title h5 {
     color: var(--gray-text);
 }
@@ -344,7 +344,15 @@
   z-index: 999; /* pastikan lebih tinggi dari elemen lain */
 }
 
-/* abou page */
+.about-profile img {
+    filter: grayscale(100%);
+    transition: filter 1s ease;
+}
+
+.about-profile img:hover {
+    filter: grayscale(0%);
+}
+/* about page */
 
 /* Blog page */
 .blog-title h5 {

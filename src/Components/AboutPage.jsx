@@ -1,5 +1,5 @@
 import "./Global.css";
-import Profile from "./assets/profile3.png";
+import Profile from "./assets/profile2.jpeg";
 
 function AboutPage() {
 
@@ -13,7 +13,7 @@ function AboutPage() {
     >
       <div className="flex justify-center">
         <div className="container">
-          <div className="about-flex flex gap-5 justify-center items-center flex-wrap">
+          <div className="about-flex flex gap-10 justify-center items-center flex-wrap">
             <div className="about-title text-white flex-1 min-w-[300px]">
               <a href="" className="about-btn text-sm py-1 px-3 rounded-lg">
                 ABOUT
