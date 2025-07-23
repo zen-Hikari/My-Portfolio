@@ -14,7 +14,6 @@ function WorkPage() {
             <div
               className="work-title "
               data-aos="fade-zoom-in"
-              data-aos-easing="linear"
               data-aos-delay="400"
             >
               <a href="" className="work-btn rounded-lg text-sm py-1 px-3">
@@ -32,7 +31,6 @@ function WorkPage() {
             <div
               className="work-img-compt mt-18"
               data-aos="fade-zoom-in"
-              data-aos-easing="linear"
               data-aos-delay="400"
             >
               <div className="btn-work-index flex justify-center pb-10">

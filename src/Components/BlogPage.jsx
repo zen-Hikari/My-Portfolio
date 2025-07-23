@@ -13,7 +13,6 @@ function BlogPage() {
             <div
               className="blog-title"
               data-aos="fade-zoom-in"
-              data-aos-easing="linear"
               data-aos-delay="400"
             >
               <a href="" className="blog-btn py-1 px-3 rounded-lg">
@@ -37,7 +36,6 @@ function BlogPage() {
             <div
               className="blog-compt mt-10"
               data-aos="fade-zoom-in"
-              data-aos-easing="linear"
               data-aos-delay="400"
             >
               <div className="blog-direction flex justify-center gap-5 mb-5">

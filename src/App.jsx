@@ -29,12 +29,13 @@ function App() {
     if (luxyWrapper) {
       luxy.init({
         wrapper: "#luxy",
-        wrapperSpeed: 0.04,
+        wrapperSpeed: 0.08,
       });
   
       AOS.init({
-        duration: 700,
-        offset: 100,
+        duration: 500,
+        offset: 220,
+        easing: 'ease',
       });
   
       const handleScroll = () => {
